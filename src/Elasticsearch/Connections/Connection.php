@@ -349,7 +349,7 @@ class Connection implements ConnectionInterface
         if (isset($params) === true && !empty($params)) {
             array_walk(
                 $params,
-                function (&$value, &$key) {
+                function (&$value) {
                     if ($value === true) {
                         $value = 'true';
                     } elseif ($value === false) {
